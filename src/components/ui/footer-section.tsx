@@ -1,4 +1,3 @@
-import * as React from "react"
 import { Send } from "lucide-react"
 
 const SHOP_LINKS = [
