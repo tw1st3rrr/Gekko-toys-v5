@@ -5,7 +5,7 @@ import {
   ReactNode,
 } from 'react'
 import { motion } from 'motion/react'
-import SeamlessVideoBg from '../../SeamlessVideoBg'
+import SeamlessVideoBg from './SeamlessVideoBg'
 
 interface ScrollExpandMediaProps {
   mediaType?: 'video' | 'image'
