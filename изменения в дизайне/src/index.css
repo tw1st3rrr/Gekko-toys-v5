@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -30,7 +30,7 @@
     --accent:  #276152;
     --accent-h: #1B4D42;
     --ink:     #276152;
-    --paper:   #F3E5AB;
+    --paper:   #F6F4E6;
     --sage:    #7A9445;
     --font-display: 'Century Gothic', 'Jura', sans-serif;
     --font-body:    'Century Gothic', 'Jura', sans-serif;

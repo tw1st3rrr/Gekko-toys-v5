@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { motion } from 'motion/react'
 
 interface LinkCardProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -18,7 +18,7 @@ const LinkCard = React.forwardRef<HTMLAnchorElement, LinkCardProps>(
         className={[
           'group relative flex h-72 w-full flex-col justify-between overflow-hidden',
           'rounded-2xl border border-gray-200 dark:border-white/10',
-          'bg-[#F3E5AB] dark:bg-[#276152] p-7 shadow-sm no-underline',
+          'bg-[#F6F4E6] dark:bg-[#276152] p-7 shadow-sm no-underline',
           className || '',
         ].join(' ')}
         initial={{ scale: 1, y: 0 }}
@@ -32,9 +32,9 @@ const LinkCard = React.forwardRef<HTMLAnchorElement, LinkCardProps>(
             <span className="w-7 h-7 rounded-full bg-[#276152] text-white text-sm font-black flex items-center justify-center shrink-0">
               {number}
             </span>
-            <h3 className="text-lg font-black text-[#276152] dark:text-[#EDD98A]">{title}</h3>
+            <h3 className="text-lg font-black text-[#276152] dark:text-[#F0EDD8]">{title}</h3>
           </div>
-          <p className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/55 max-w-[65%] leading-relaxed">
+          <p className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/55 max-w-[65%] leading-relaxed">
             {description}
           </p>
         </div>

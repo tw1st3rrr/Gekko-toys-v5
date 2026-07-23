@@ -1,4 +1,4 @@
-﻿import { useState, useRef, useEffect, createContext, useContext } from 'react'
+import { useState, useRef, useEffect, createContext, useContext } from 'react'
 import { motion } from 'motion/react'
 import { Check, Star as LucideStar } from 'lucide-react'
 import NumberFlow from '@number-flow/react'
@@ -99,14 +99,14 @@ function Toggle() {
         <button
           ref={readyRef}
           onClick={() => toggle(true)}
-          className={`relative z-10 rounded-full px-5 sm:px-7 py-2 text-sm font-semibold transition-colors ${isReady ? 'text-white' : 'text-[#276152]/60 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A]'}`}
+          className={`relative z-10 rounded-full px-5 sm:px-7 py-2 text-sm font-semibold transition-colors ${isReady ? 'text-white' : 'text-[#276152]/60 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8]'}`}
         >
           Готовый набор
         </button>
         <button
           ref={indivRef}
           onClick={() => toggle(false)}
-          className={`relative z-10 rounded-full px-5 sm:px-7 py-2 text-sm font-semibold transition-colors ${!isReady ? 'text-white' : 'text-[#276152]/60 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A]'}`}
+          className={`relative z-10 rounded-full px-5 sm:px-7 py-2 text-sm font-semibold transition-colors ${!isReady ? 'text-white' : 'text-[#276152]/60 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8]'}`}
         >
           Индивидуальный проект
         </button>
@@ -132,7 +132,7 @@ function Card({ plan, index }: { plan: Plan; index: number }) {
       whileInView={{ y: plan.isPopular && isDesktop ? -20 : 0, opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, type: 'spring', stiffness: 100, damping: 20, delay: index * 0.15 }}
-      className={`h-full rounded-2xl p-8 flex flex-col relative bg-[#F3E5AB]/80 dark:bg-[#276152]/80 backdrop-blur-sm ${
+      className={`h-full rounded-2xl p-8 flex flex-col relative bg-[#F6F4E6]/80 dark:bg-[#276152]/80 backdrop-blur-sm ${
         plan.isPopular
           ? 'border-2 border-[#276152] shadow-xl'
           : 'border border-gray-200 dark:border-white/10'
@@ -147,10 +147,10 @@ function Card({ plan, index }: { plan: Plan; index: number }) {
         </div>
       )}
       <div className="flex-1 flex flex-col text-center">
-        <h3 className="text-xl font-black text-[#276152] dark:text-[#EDD98A]">{plan.name}</h3>
-        <p className="mt-1 text-sm text-[#276152]/50 dark:text-[#EDD98A]/50">{plan.subtitle}</p>
+        <h3 className="text-xl font-black text-[#276152] dark:text-[#F0EDD8]">{plan.name}</h3>
+        <p className="mt-1 text-sm text-[#276152]/50 dark:text-[#F0EDD8]/50">{plan.subtitle}</p>
         <div className="mt-6 flex items-baseline justify-center">
-          <span className="text-5xl font-black tracking-tight text-[#276152] dark:text-[#EDD98A]">
+          <span className="text-5xl font-black tracking-tight text-[#276152] dark:text-[#F0EDD8]">
             <NumberFlow
               value={isReady ? plan.readyPrice : plan.indivPrice}
               locales="ru-RU"
@@ -158,10 +158,10 @@ function Card({ plan, index }: { plan: Plan; index: number }) {
             />
           </span>
         </div>
-        <p className="text-xs text-[#276152]/40 dark:text-[#EDD98A]/40 mt-1">
+        <p className="text-xs text-[#276152]/40 dark:text-[#F0EDD8]/40 mt-1">
           {isReady ? 'Готовый набор' : 'Индивидуальный проект'}
         </p>
-        <ul className="mt-8 space-y-3 text-sm text-left text-[#276152]/70 dark:text-[#EDD98A]/60">
+        <ul className="mt-8 space-y-3 text-sm text-left text-[#276152]/70 dark:text-[#F0EDD8]/60">
           {plan.features.map(f => (
             <li key={f} className="flex gap-x-3 items-start">
               <Check className="h-5 w-4 flex-none text-[#276152] mt-0.5" />
@@ -175,7 +175,7 @@ function Card({ plan, index }: { plan: Plan; index: number }) {
             className={`w-full py-3.5 rounded-2xl text-sm font-bold transition-colors ${
               plan.isPopular
                 ? 'bg-[#276152] text-white hover:bg-[#1B4D42]'
-                : 'border-2 border-[#276152]/30 dark:border-white/20 text-[#276152] dark:text-[#EDD98A] hover:border-[#276152] dark:hover:border-white/40'
+                : 'border-2 border-[#276152]/30 dark:border-white/20 text-[#276152] dark:text-[#F0EDD8] hover:border-[#276152] dark:hover:border-white/40'
             }`}
           >
             {plan.buttonText}
@@ -198,17 +198,17 @@ export function PriceCalculatorSection() {
           <p className="text-xs font-semibold uppercase tracking-widest text-[#276152] dark:text-[#7A9445] mb-4 text-center">
             / стоимость
           </p>
-          <h2 className="text-3xl sm:text-5xl font-black font-display text-[#276152] dark:text-[#EDD98A] mb-4 text-center tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black font-display text-[#276152] dark:text-[#F0EDD8] mb-4 text-center tracking-tight">
             Выбери свой формат
           </h2>
-          <p className="text-[#276152]/60 dark:text-[#EDD98A]/60 text-base mb-12 max-w-xl mx-auto text-center">
+          <p className="text-[#276152]/60 dark:text-[#F0EDD8]/60 text-base mb-12 max-w-xl mx-auto text-center">
             Все наборы включают базовые платы, кирпичики, схему сборки и доставку по России.
           </p>
           <Toggle />
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {PLANS.map((plan, i) => <Card key={i} plan={plan} index={i} />)}
           </div>
-          <p className="text-center text-xs text-[#276152]/40 dark:text-[#EDD98A]/40 mt-10">
+          <p className="text-center text-xs text-[#276152]/40 dark:text-[#F0EDD8]/40 mt-10">
             * Цена является ориентировочной. Окончательная стоимость рассчитывается при оформлении заказа.
           </p>
         </div>

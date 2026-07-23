@@ -1,4 +1,4 @@
-﻿import { LinkCard } from '@/components/ui/link-card'
+import { LinkCard } from '@/components/ui/link-card'
 
 const STEPS = [
   {
@@ -31,7 +31,7 @@ export function HowItWorksSection() {
         <p className="text-xs font-semibold uppercase tracking-widest text-[#276152] dark:text-[#7A9445] mb-3">
           / как это работает
         </p>
-        <h2 className="text-3xl sm:text-4xl font-black font-display text-[#276152] dark:text-[#EDD98A] mb-10">
+        <h2 className="text-3xl sm:text-4xl font-black font-display text-[#276152] dark:text-[#F0EDD8] mb-10">
           Три шага до вашей картины
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

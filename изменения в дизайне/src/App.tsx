@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {
   Twitter, Instagram, Linkedin, MessageCircle,
   Phone, Mail, Clock, ArrowRight, Check,
@@ -209,7 +209,7 @@ function CatalogSection() {
                   className={`shrink-0 px-4 py-2 rounded-full text-sm font-semibold border transition-all ${
                     index === activeCategory
                       ? 'bg-[#276152] text-white border-[#276152]'
-                      : 'text-[#EDD98A]/60 border-white/20 hover:border-white/40'
+                      : 'text-[#F0EDD8]/60 border-white/20 hover:border-white/40'
                   }`}
                 >
                   {cat.title}
@@ -228,14 +228,14 @@ function CatalogSection() {
                   <TextStaggerHover
                     index={index}
                     text={cat.title}
-                    className="text-4xl xl:text-5xl font-black uppercase tracking-tighter font-display text-[#276152] dark:text-[#EDD98A] leading-none"
+                    className="text-4xl xl:text-5xl font-black uppercase tracking-tighter font-display text-[#276152] dark:text-[#F0EDD8] leading-none"
                   />
                   <ArrowRight
                     size={22}
                     className={`shrink-0 mt-1 transition-all duration-200 ${
                       index === activeCategory
-                        ? 'text-[#276152] dark:text-[#EDD98A] translate-x-1'
-                        : 'text-[#276152]/20 dark:text-[#EDD98A]/20 group-hover:text-[#276152]/40 dark:group-hover:text-[#EDD98A]/40'
+                        ? 'text-[#276152] dark:text-[#F0EDD8] translate-x-1'
+                        : 'text-[#276152]/20 dark:text-[#F0EDD8]/20 group-hover:text-[#276152]/40 dark:group-hover:text-[#F0EDD8]/40'
                     }`}
                   />
                 </button>
@@ -273,7 +273,7 @@ function CatalogSection() {
             </div>
 
             <div className="mt-4 h-10 flex items-start overflow-hidden">
-              <p className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/60 leading-relaxed">
+              <p className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/60 leading-relaxed">
                 {currentGallery.images[activeImage]?.caption}
               </p>
             </div>
@@ -294,7 +294,7 @@ function CatalogSection() {
                   {i === activeImage && (
                     <div
                       key={`fill-${activeCategory}-${activeImage}`}
-                      className="absolute inset-y-0 left-0 rounded-full bg-[#276152] dark:bg-[#EDD98A]"
+                      className="absolute inset-y-0 left-0 rounded-full bg-[#276152] dark:bg-[#F0EDD8]"
                       style={{ animation: `slideProgress ${GALLERY_AUTOPLAY_MS}ms linear forwards` }}
                     />
                   )}
@@ -303,17 +303,17 @@ function CatalogSection() {
               <div className="ml-auto flex gap-1.5">
                 <button
                   onClick={() => goToImage((activeImage - 1 + currentGallery.images.length) % currentGallery.images.length)}
-                  className="w-8 h-8 rounded-full border border-[#276152]/20 dark:border-[#EDD98A]/20 flex items-center justify-center hover:bg-[#276152]/8 dark:hover:bg-white/10 transition-colors"
+                  className="w-8 h-8 rounded-full border border-[#276152]/20 dark:border-[#F0EDD8]/20 flex items-center justify-center hover:bg-[#276152]/8 dark:hover:bg-white/10 transition-colors"
                   aria-label="Назад"
                 >
-                  <ArrowRight size={13} className="text-[#276152] dark:text-[#EDD98A] rotate-180" />
+                  <ArrowRight size={13} className="text-[#276152] dark:text-[#F0EDD8] rotate-180" />
                 </button>
                 <button
                   onClick={() => goToImage((activeImage + 1) % currentGallery.images.length)}
-                  className="w-8 h-8 rounded-full border border-[#276152]/20 dark:border-[#EDD98A]/20 flex items-center justify-center hover:bg-[#276152]/8 dark:hover:bg-white/10 transition-colors"
+                  className="w-8 h-8 rounded-full border border-[#276152]/20 dark:border-[#F0EDD8]/20 flex items-center justify-center hover:bg-[#276152]/8 dark:hover:bg-white/10 transition-colors"
                   aria-label="Вперёд"
                 >
-                  <ArrowRight size={13} className="text-[#276152] dark:text-[#EDD98A]" />
+                  <ArrowRight size={13} className="text-[#276152] dark:text-[#F0EDD8]" />
                 </button>
               </div>
             </div>
@@ -360,10 +360,10 @@ export default function App() {
   }
 
   const inputCls =
-    'flex-1 min-w-0 text-sm px-3 py-2.5 rounded-xl border border-[#276152]/20 dark:border-white/20 bg-transparent placeholder-[#276152]/40 dark:placeholder-white/40 text-[#276152] dark:text-[#EDD98A] focus:outline-none focus:ring-2 focus:ring-[#276152] dark:focus:ring-[#276152]/60 focus:border-transparent transition'
+    'flex-1 min-w-0 text-sm px-3 py-2.5 rounded-xl border border-[#276152]/20 dark:border-white/20 bg-transparent placeholder-[#276152]/40 dark:placeholder-white/40 text-[#276152] dark:text-[#F0EDD8] focus:outline-none focus:ring-2 focus:ring-[#276152] dark:focus:ring-[#276152]/60 focus:border-transparent transition'
 
   return (
-    <div className="min-h-screen bg-[#F3E5AB] dark:bg-[#1B3D30]">
+    <div className="min-h-screen bg-[#F6F4E6] dark:bg-[#1B3D30]">
 
       {/* ════════════════════════════════════════════════
           FIXED NAVBAR
@@ -371,7 +371,7 @@ export default function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 p-3 sm:p-4">
         {/* ── Main bar ── */}
         <div className="flex items-center pl-3 sm:pl-4 pr-2 py-2
-          bg-[#F3E5AB]/80 dark:bg-[#1B3D30]/80 backdrop-blur-md rounded-2xl shadow-sm
+          bg-[#F6F4E6]/80 dark:bg-[#1B3D30]/80 backdrop-blur-md rounded-2xl shadow-sm
           gap-3 sm:gap-6">
           <a href="/" className="shrink-0">
             <div className="bg-white rounded-xl px-2 py-1">
@@ -394,7 +394,7 @@ export default function App() {
                 } : undefined}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="text-[#276152] dark:text-[#EDD98A] text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
+                className="text-[#276152] dark:text-[#F0EDD8] text-sm font-medium hover:opacity-60 transition-opacity whitespace-nowrap"
               >
                 {label}
               </a>
@@ -412,8 +412,8 @@ export default function App() {
               aria-label="Меню"
             >
               {mobileMenuOpen
-                ? <X size={18} className="text-[#EDD98A]" />
-                : <Menu size={18} className="text-[#EDD98A]" />}
+                ? <X size={18} className="text-[#F0EDD8]" />
+                : <Menu size={18} className="text-[#F0EDD8]" />}
             </button>
           </div>
         </div>
@@ -435,7 +435,7 @@ export default function App() {
                   }}
                   target={href.startsWith('http') ? '_blank' : undefined}
                   rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="text-base font-semibold text-[#EDD98A] px-5 py-4 hover:bg-white/5 transition-colors"
+                  className="text-base font-semibold text-[#F0EDD8] px-5 py-4 hover:bg-white/5 transition-colors"
                 >
                   {label}
                 </a>
@@ -498,7 +498,7 @@ export default function App() {
       ════════════════════════════════════════════════ */}
       <div
         ref={postHeroRef}
-        className="relative z-10 bg-[#F3E5AB] dark:bg-[#1B3D30] overflow-hidden"
+        className="relative z-10 bg-[#F6F4E6] dark:bg-[#1B3D30] overflow-hidden"
         onMouseMove={e => setStarMousePos({ x: e.clientX, y: e.clientY })}
         onMouseLeave={() => setStarMousePos({ x: null, y: null })}
       >
@@ -516,25 +516,25 @@ export default function App() {
         {/* ════════════════════════════════════════════════
             CONTACT FORM SECTION
         ════════════════════════════════════════════════ */}
-        <section id="contacts" className="bg-[#F3E5AB] dark:bg-[#1B3D30] px-6 sm:px-10 py-20">
+        <section id="contacts" className="bg-[#F6F4E6] dark:bg-[#1B3D30] px-6 sm:px-10 py-20">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-14 items-start">
 
             {/* Left: intro */}
             <div>
-              <h2 className="text-3xl font-black font-display text-[#276152] dark:text-[#EDD98A] mb-4">Напишите нам!</h2>
-              <p className="text-[#276152]/60 dark:text-[#EDD98A]/60 text-base leading-relaxed mb-8 max-w-sm">
+              <h2 className="text-3xl font-black font-display text-[#276152] dark:text-[#F0EDD8] mb-4">Напишите нам!</h2>
+              <p className="text-[#276152]/60 dark:text-[#F0EDD8]/60 text-base leading-relaxed mb-8 max-w-sm">
                 Расскажите о вашем проекте — ответим в течение 24 часов и подберём лучший вариант набора.
               </p>
 
               <div className="flex flex-row items-center justify-between gap-3 bg-[#276152]/5 dark:bg-white/5 rounded-2xl px-4 py-3 mb-6">
                 <div className="flex flex-col min-w-0">
-                  <span className="text-xs text-[#276152]/40 dark:text-[#EDD98A]/40 font-medium mb-0.5">Напрямую</span>
+                  <span className="text-xs text-[#276152]/40 dark:text-[#F0EDD8]/40 font-medium mb-0.5">Напрямую</span>
                   <a href="mailto:oooalextoys@mail.ru" className="text-[#276152] dark:text-[#7A9445] font-semibold text-sm hover:underline truncate">
                     oooalextoys@mail.ru
                   </a>
                 </div>
                 <div className="flex items-center gap-1.5 shrink-0">
-                  <SocialBtn icon={<Twitter size={13} />}       bg="bg-[#276152]/8 dark:bg-white/10"   color="text-[#276152] dark:text-[#EDD98A]"   label="Twitter"   />
+                  <SocialBtn icon={<Twitter size={13} />}       bg="bg-[#276152]/8 dark:bg-white/10"   color="text-[#276152] dark:text-[#F0EDD8]"   label="Twitter"   />
                   <SocialBtn icon={<MessageCircle size={13} />} bg="bg-[#276152]/10 dark:bg-[#276152]/20"   color="text-[#276152] dark:text-[#7A9445]"   label="Telegram"  />
                   <SocialBtn icon={<Instagram size={13} />}     bg="bg-orange-100 dark:bg-orange-900/30" color="text-orange-400" label="Instagram" />
                   <SocialBtn icon={<Linkedin size={13} />}      bg="bg-blue-100 dark:bg-blue-900/30"   color="text-blue-600 dark:text-blue-400"   label="LinkedIn"  />
@@ -545,14 +545,14 @@ export default function App() {
 
             {/* Right: form */}
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#276152]/40 dark:text-[#EDD98A]/30 mb-5">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#276152]/40 dark:text-[#F0EDD8]/30 mb-5">
                 Заполните форму
               </p>
               {sent ? (
                 <div className="flex flex-col items-center py-16 gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#276152]/10 dark:bg-[#276152]/30 flex items-center justify-center"><Check size={22} className="text-[#276152]" /></div>
-                  <p className="text-base font-semibold text-[#276152] dark:text-[#EDD98A]">Отправлено!</p>
-                  <p className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/60">Ответим в течение 24 часов.</p>
+                  <p className="text-base font-semibold text-[#276152] dark:text-[#F0EDD8]">Отправлено!</p>
+                  <p className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/60">Ответим в течение 24 часов.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -563,14 +563,14 @@ export default function App() {
                   <textarea rows={4} placeholder="Что хотите создать или улучшить..." value={message} onChange={e => setMessage(e.target.value)} className={`${inputCls} w-full resize-none`} />
 
                   <div>
-                    <label className="text-sm font-medium text-[#276152] dark:text-[#EDD98A] block mb-2">Что вас интересует?</label>
+                    <label className="text-sm font-medium text-[#276152] dark:text-[#F0EDD8] block mb-2">Что вас интересует?</label>
                     <div className="flex flex-wrap gap-1.5">
                       {SERVICES.map(s => (
                         <button key={s} type="button" onClick={() => toggleService(s)}
                           className={`text-xs font-medium px-3 py-2 rounded-lg border transition-all ${
                             selected.includes(s)
-                              ? 'bg-[#276152]/10 dark:bg-white/15 text-[#276152] dark:text-[#EDD98A] border-[#276152] dark:border-white/40'
-                              : 'bg-[#F3E5AB] dark:bg-transparent text-[#276152]/70 dark:text-[#EDD98A]/70 border-[#276152]/20 dark:border-white/20 hover:border-[#276152] dark:hover:border-white/40'
+                              ? 'bg-[#276152]/10 dark:bg-white/15 text-[#276152] dark:text-[#F0EDD8] border-[#276152] dark:border-white/40'
+                              : 'bg-[#F6F4E6] dark:bg-transparent text-[#276152]/70 dark:text-[#F0EDD8]/70 border-[#276152]/20 dark:border-white/20 hover:border-[#276152] dark:hover:border-white/40'
                           }`}>
                           {s}
                         </button>
@@ -592,20 +592,20 @@ export default function App() {
         {/* ════════════════════════════════════════════════
             CONTACTS + MAP
         ════════════════════════════════════════════════ */}
-        <section id="contacts" className="bg-[#EDD98A] dark:bg-[#1B3D30] px-6 sm:px-10 py-20">
+        <section id="contacts" className="bg-[#F0EDD8] dark:bg-[#1B3D30] px-6 sm:px-10 py-20">
           <div className="max-w-6xl mx-auto">
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 items-start mb-20">
               <div>
-                <h2 className="text-3xl font-black font-display text-[#276152] dark:text-[#EDD98A] mb-8">Контакты</h2>
+                <h2 className="text-3xl font-black font-display text-[#276152] dark:text-[#F0EDD8] mb-8">Контакты</h2>
                 <div className="flex flex-col gap-5">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-[#276152]/10 dark:bg-[#276152]/30 flex items-center justify-center shrink-0">
                       <Phone size={18} className="text-[#276152]" />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-[#276152] dark:text-[#EDD98A]">Телефон</div>
-                      <div className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/60 mt-0.5">8-499-165-04-23</div>
+                      <div className="text-sm font-bold text-[#276152] dark:text-[#F0EDD8]">Телефон</div>
+                      <div className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/60 mt-0.5">8-499-165-04-23</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -613,8 +613,8 @@ export default function App() {
                       <Mail size={18} className="text-blue-600" />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-[#276152] dark:text-[#EDD98A]">Email</div>
-                      <div className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/60 mt-0.5">oooalextoys@mail.ru<br />alextoys.sale@mail.ru</div>
+                      <div className="text-sm font-bold text-[#276152] dark:text-[#F0EDD8]">Email</div>
+                      <div className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/60 mt-0.5">oooalextoys@mail.ru<br />alextoys.sale@mail.ru</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -622,8 +622,8 @@ export default function App() {
                       <Clock size={18} className="text-orange-500" />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-[#276152] dark:text-[#EDD98A]">Часы работы</div>
-                      <div className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/60 mt-0.5">Пн–Пт: 10:00 – 18:00<br />Сб–Вс: выходные дни</div>
+                      <div className="text-sm font-bold text-[#276152] dark:text-[#F0EDD8]">Часы работы</div>
+                      <div className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/60 mt-0.5">Пн–Пт: 10:00 – 18:00<br />Сб–Вс: выходные дни</div>
                     </div>
                   </div>
                 </div>

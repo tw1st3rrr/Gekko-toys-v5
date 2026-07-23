@@ -1,4 +1,4 @@
-﻿import { Send } from "lucide-react"
+import { Send } from "lucide-react"
 
 const SHOP_LINKS = [
   { text: "Каталог наборов", url: "https://gekkotoys.ru/catalog" },
@@ -18,14 +18,14 @@ const COMPANY_LINKS = [
 
 function Footerdemo() {
   return (
-    <footer className="border-t border-gray-100 dark:border-white/10 bg-[#F3E5AB] dark:bg-[#1B3D30] text-[#276152] dark:text-[#EDD98A]">
+    <footer className="border-t border-gray-100 dark:border-white/10 bg-[#F6F4E6] dark:bg-[#1B3D30] text-[#276152] dark:text-[#F0EDD8]">
 
       {/* CTA strip — like Mozabrick "Уже купили?" */}
       <div className="border-b border-gray-100 dark:border-white/10">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <p className="font-bold text-sm text-[#276152] dark:text-[#EDD98A]">Уже купили набор ГЕККО?</p>
-            <p className="text-xs text-[#276152]/60 dark:text-[#EDD98A]/60 mt-0.5">Загрузи фото и получи схему сборки по ссылке</p>
+            <p className="font-bold text-sm text-[#276152] dark:text-[#F0EDD8]">Уже купили набор ГЕККО?</p>
+            <p className="text-xs text-[#276152]/60 dark:text-[#F0EDD8]/60 mt-0.5">Загрузи фото и получи схему сборки по ссылке</p>
           </div>
           <a
             href="http://91.229.10.93:5000/"
@@ -54,10 +54,10 @@ function Footerdemo() {
                 />
               </div>
             </div>
-            <p className="text-sm text-[#276152]/60 dark:text-[#EDD98A]/60 leading-relaxed mb-5">
+            <p className="text-sm text-[#276152]/60 dark:text-[#F0EDD8]/60 leading-relaxed mb-5">
               Пиксельный конструктор из уникальных фишек. Собери картину из своего фото или выбери готовый дизайн.
             </p>
-            <address className="not-italic space-y-1.5 text-sm text-[#276152]/70 dark:text-[#EDD98A]/60">
+            <address className="not-italic space-y-1.5 text-sm text-[#276152]/70 dark:text-[#F0EDD8]/60">
               <p>
                 <a href="tel:+74991650423" className="hover:text-[#276152] transition-colors">
                   8-499-165-04-23
@@ -68,7 +68,7 @@ function Footerdemo() {
                   oooalextoys@mail.ru
                 </a>
               </p>
-              <p className="text-[#276152]/50 dark:text-[#EDD98A]/40">Пн–Пт: 10:00–18:00</p>
+              <p className="text-[#276152]/50 dark:text-[#F0EDD8]/40">Пн–Пт: 10:00–18:00</p>
             </address>
           </div>
 
@@ -80,7 +80,7 @@ function Footerdemo() {
                 <li key={link.text}>
                   <a
                     href={link.url}
-                    className="text-sm text-[#276152]/70 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A] transition-colors"
+                    className="text-sm text-[#276152]/70 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8] transition-colors"
                   >
                     {link.text}
                   </a>
@@ -97,7 +97,7 @@ function Footerdemo() {
                 <li key={link.text}>
                   <a
                     href={link.url}
-                    className="text-sm text-[#276152]/70 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A] transition-colors"
+                    className="text-sm text-[#276152]/70 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8] transition-colors"
                   >
                     {link.text}
                   </a>
@@ -112,19 +112,19 @@ function Footerdemo() {
             <ul className="space-y-3 mb-8">
               <li>
                 <a href="https://vk.com/gekkotoys" target="_blank" rel="noopener noreferrer"
-                  className="text-sm text-[#276152]/70 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A] transition-colors flex items-center gap-2">
+                  className="text-sm text-[#276152]/70 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8] transition-colors flex items-center gap-2">
                   <span className="text-[#276152] text-base leading-none">VK</span> ВКонтакте
                 </a>
               </li>
               <li>
                 <a href="https://instagram.com/gekkotoys" target="_blank" rel="noopener noreferrer"
-                  className="text-sm text-[#276152]/70 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A] transition-colors flex items-center gap-2">
+                  className="text-sm text-[#276152]/70 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8] transition-colors flex items-center gap-2">
                   <span className="text-[#276152] text-base leading-none">IG</span> Instagram
                 </a>
               </li>
               <li>
                 <a href="https://t.me/gekkotoys" target="_blank" rel="noopener noreferrer"
-                  className="text-sm text-[#276152]/70 dark:text-[#EDD98A]/60 hover:text-[#276152] dark:hover:text-[#EDD98A] transition-colors flex items-center gap-2">
+                  className="text-sm text-[#276152]/70 dark:text-[#F0EDD8]/60 hover:text-[#276152] dark:hover:text-[#F0EDD8] transition-colors flex items-center gap-2">
                   <span className="text-[#276152] text-base leading-none">TG</span> Telegram
                 </a>
               </li>
@@ -135,10 +135,10 @@ function Footerdemo() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-gray-100 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#276152]/40 dark:text-[#EDD98A]/30">
+          <p className="text-xs text-[#276152]/40 dark:text-[#F0EDD8]/30">
             © 2025 ГЕККО ТОЙС · ООО «Алекс Тойс». Все права защищены.
           </p>
-          <nav className="flex flex-wrap justify-center gap-4 text-xs text-[#276152]/40 dark:text-[#EDD98A]/30">
+          <nav className="flex flex-wrap justify-center gap-4 text-xs text-[#276152]/40 dark:text-[#F0EDD8]/30">
             <a href="https://gekkotoys.ru/privacy" className="hover:text-[#276152] transition-colors">
               Политика конфиденциальности
             </a>

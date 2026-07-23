@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, useSpring } from 'motion/react'
 
 function Star({
@@ -30,7 +30,7 @@ function Star({
 
   return (
     <motion.div
-      className="absolute bg-[#276152] dark:bg-[#EDD98A] rounded-full"
+      className="absolute bg-[#276152] dark:bg-[#F0EDD8] rounded-full"
       style={{ top: pos.top, left: pos.left, width: `${size}px`, height: `${size}px`, x: sx, y: sy }}
       initial={{ opacity: 0 }}
       animate={{ opacity: [0, 1, 0] }}

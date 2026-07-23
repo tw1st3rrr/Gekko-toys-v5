@@ -1,4 +1,4 @@
-﻿// src/components/sections/ReviewsSection.tsx
+// src/components/sections/ReviewsSection.tsx
 
 const REVIEWS = [
   {
@@ -55,21 +55,21 @@ function StarRating() {
 
 export function ReviewsSection() {
   return (
-    <section className="bg-[#F3E5AB] dark:bg-[#1B3D30] px-6 sm:px-10 py-20 sm:py-28">
+    <section className="bg-[#F6F4E6] dark:bg-[#1B3D30] px-6 sm:px-10 py-20 sm:py-28">
       <div className="max-w-6xl mx-auto">
         <p className="text-xs font-semibold uppercase tracking-widest text-[#276152] dark:text-[#7A9445] mb-4">
           / отзывы
         </p>
         <div className="flex items-end justify-between mb-12 gap-4 flex-wrap">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-black font-display text-[#276152] dark:text-[#EDD98A]">
+            <h2 className="text-3xl sm:text-4xl font-black font-display text-[#276152] dark:text-[#F0EDD8]">
               Что говорят покупатели
             </h2>
-            <p className="text-[#276152]/50 dark:text-[#EDD98A]/50 text-sm mt-2">Более 500 собранных наборов</p>
+            <p className="text-[#276152]/50 dark:text-[#F0EDD8]/50 text-sm mt-2">Более 500 собранных наборов</p>
           </div>
           <div className="flex items-center gap-2">
             <StarRating />
-            <span className="text-sm font-bold text-[#276152] dark:text-[#EDD98A]">5.0</span>
+            <span className="text-sm font-bold text-[#276152] dark:text-[#F0EDD8]">5.0</span>
           </div>
         </div>
 
@@ -87,10 +87,10 @@ export function ReviewsSection() {
               </div>
               <div className="p-5">
                 <StarRating />
-                <p className="text-sm text-[#276152]/70 dark:text-[#EDD98A]/70 leading-relaxed mt-3 mb-4">«{r.text}»</p>
+                <p className="text-sm text-[#276152]/70 dark:text-[#F0EDD8]/70 leading-relaxed mt-3 mb-4">«{r.text}»</p>
                 <div>
-                  <span className="text-sm font-bold text-[#276152] dark:text-[#EDD98A]">{r.name}</span>
-                  <span className="text-xs text-[#276152]/40 dark:text-[#EDD98A]/40 ml-2">{r.city}</span>
+                  <span className="text-sm font-bold text-[#276152] dark:text-[#F0EDD8]">{r.name}</span>
+                  <span className="text-xs text-[#276152]/40 dark:text-[#F0EDD8]/40 ml-2">{r.city}</span>
                 </div>
               </div>
             </div>
